@@ -1,9 +1,10 @@
 object Main
 {
-  var height,weight=0.0f;
-  def main(args:Array[String])=
+   def main(args:Array[String])=
   {
-    ask(ask_units());
+    val unit=ask_units();
+    val height=ask_height(unit);
+    val weight=ask_weight(unit);
     val res=calc(height,weight);
     println(f"$res%.2f");
   }
